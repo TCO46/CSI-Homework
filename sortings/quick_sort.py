@@ -9,9 +9,9 @@ def quickSort(arr):
 
     for i in arr:
         if i <= pivot:
-            left.append(k)
+            left.append(i)
         else:
-            right.append(k)
+            right.append(i)
 
     return quickSort(left) + [pivot] + quickSort(right)
 
