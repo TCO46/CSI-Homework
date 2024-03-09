@@ -1,5 +1,5 @@
 class Student:
-    students = []
+    student = []
 
     def add_student(self):
         self.studentID = int(input('Enter student ID: '))
@@ -7,7 +7,7 @@ class Student:
         self.age = int(input("Enter Student age: "))
         self.averageScore = int(input("Enter Student average score: "))
 
-        students.append({
+        self.student.append({
             'ID': self.studentID,
             'name': self.name,
             'age': self.age,
@@ -15,11 +15,10 @@ class Student:
         })
 
     def print_student_into(self):
-        return {
-            'ID': self.studentID,
-            'name': self.name,
-            'age': self.age,
-            'avereageScore': self.averageScore
-        }
+        return self.student
 
-    # def find_student(self):
+
+student1 = Student()
+student1.add_student()
+
+print(student1.print_student_into())
